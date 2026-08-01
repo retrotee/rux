@@ -11,12 +11,4 @@ modules:
         - cosmic-desktop
         - cosmic-desktop-apps
 
-  - type: systemd
-    system:
-      enabled:
-        - cosmic-greeter.service
-      disabled:
-        - sddm.service
-        - gdm.service
-
   - type: signing
