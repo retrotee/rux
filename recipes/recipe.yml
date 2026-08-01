@@ -5,16 +5,11 @@ image-version: latest
 
 modules:
   - type: dnf
-    repos:
-      copr:
-        - ryanabx/cosmic
-
-  - type: rpm-ostree
-    install:
-      - cosmic-desktop
-      - cosmic-term
-      - cosmic-files
-      - cosmic-edit
+    group-install:
+      with-optional: true
+      packages:
+        - cosmic-desktop
+        - cosmic-desktop-apps
 
   - type: systemd
     system:
