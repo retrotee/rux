@@ -4,9 +4,10 @@ base-image: ghcr.io/ublue-os/bazzite-nvidia-open
 image-version: latest
 
 modules:
-  - type: copr
-    enable:
-      - ryanabx/cosmic
+  - type: dnf
+    repos:
+      copr:
+        - ryanabx/cosmic
 
   - type: rpm-ostree
     install:
